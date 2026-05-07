@@ -1,0 +1,10 @@
+PASTA DE LOGOS — EuroAlumínios do Sul
+=======================================
+
+Coloque aqui o logótipo da empresa com o nome:
+
+  logo.png    — Logótipo principal (fundo transparente recomendado)
+                Tamanho sugerido: 200x80 px ou proporcional
+
+O website usa automaticamente este ficheiro na navbar e no footer.
+Se o ficheiro não existir, o website mostrará apenas o texto "EuroAlumínios / do Sul".
