@@ -1,0 +1,116 @@
+/*!
+ * Font Awesome Free 5 — Self-hosted subset
+ * Only the icons used by EuroAlumínios do Sul website
+ * Fonts: SIL OFL 1.1 | CSS: MIT License
+ */
+
+/* ── @font-face declarations ─────────────────────────── */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('../webfonts/fa-solid-900.woff2') format('woff2'),
+       url('../webfonts/fa-solid-900.woff')  format('woff'),
+       url('../webfonts/fa-solid-900.ttf')   format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../webfonts/fa-brands-400.woff2') format('woff2'),
+       url('../webfonts/fa-brands-400.woff')  format('woff'),
+       url('../webfonts/fa-brands-400.ttf')   format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../webfonts/fa-regular-400.woff2') format('woff2'),
+       url('../webfonts/fa-regular-400.woff')  format('woff');
+}
+
+/* ── Base classes ────────────────────────────────────── */
+.fas, .far, .fab, .fa {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fas, .far {
+  font-family: 'Font Awesome 5 Free';
+}
+.fas { font-weight: 900; }
+.far { font-weight: 400; }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+/* ── Utility ─────────────────────────────────────────── */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+@-webkit-keyframes fa-spin {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+}
+@keyframes fa-spin {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+}
+
+/* ── Solid icons (fas) ───────────────────────────────── */
+/* envelope          */ .fa-envelope::before          { content: "\f0e0"; }
+/* phone-alt         */ .fa-phone-alt::before,
+/* phone             */ .fa-phone::before             { content: "\f095"; } /* phone glyph — phone-alt not in this font version */
+/* mobile-alt        */ .fa-mobile-alt::before        { content: "\f3cd"; }
+/* map-marker-alt    */ .fa-map-marker-alt::before,
+/* map-marker        */ .fa-map-marker::before        { content: "\f3c5"; }
+/* paper-plane       */ .fa-paper-plane::before       { content: "\f1d8"; }
+/* calculator        */ .fa-calculator::before        { content: "\f1ec"; }
+/* th-large          */ .fa-th-large::before          { content: "\f009"; }
+/* check-circle      */ .fa-check-circle::before      { content: "\f058"; }
+/* handshake         */ .fa-handshake::before         { content: "\f2b5"; }
+/* images            */ .fa-images::before            { content: "\f302"; }
+/* chevron-left      */ .fa-chevron-left::before      { content: "\f053"; }
+/* chevron-right     */ .fa-chevron-right::before     { content: "\f054"; }
+/* spinner           */ .fa-spinner::before           { content: "\f110"; }
+/* tools → wrench    */ .fa-tools::before             { content: "\f0ad"; } /* wrench glyph — tools not in this font version */
+/* bolt              */ .fa-bolt::before              { content: "\f0e7"; }
+/* award → trophy    */ .fa-award::before             { content: "\f091"; } /* trophy glyph — award not in this font version */
+/* user-check        */ .fa-user-check::before        { content: "\f234"; } /* user-plus glyph — user-check not in this font version */
+/* heart             */ .fa-heart::before             { content: "\f004"; }
+/* home              */ .fa-home::before              { content: "\f015"; }
+/* shield-alt        */ .fa-shield-alt::before        { content: "\f3ed"; }
+/* building          */ .fa-building::before          { content: "\f1ad"; }
+/* snowflake         */ .fa-snowflake::before         { content: "\f2dc"; }
+/* align-justify     */ .fa-align-justify::before     { content: "\f039"; }
+/* minus             */ .fa-minus::before             { content: "\f068"; }
+/* check             */ .fa-check::before             { content: "\f00c"; }
+/* star              */ .fa-star::before              { content: "\f005"; }
+/* times             */ .fa-times::before             { content: "\f00d"; }
+/* bars              */ .fa-bars::before              { content: "\f0c9"; }
+/* wrench            */ .fa-wrench::before            { content: "\f0ad"; }
+/* cog               */ .fa-cog::before               { content: "\f013"; }
+/* user              */ .fa-user::before              { content: "\f007"; }
+/* users             */ .fa-users::before             { content: "\f0c0"; }
+/* trophy            */ .fa-trophy::before            { content: "\f091"; }
+/* user-plus         */ .fa-user-plus::before         { content: "\f234"; }
+
+/* ── Brand icons (fab) ───────────────────────────────── */
+/* facebook-f        */ .fa-facebook-f::before        { content: "\f39e"; }
+/* instagram         */ .fa-instagram::before         { content: "\f16d"; }
+/* whatsapp          */ .fa-whatsapp::before          { content: "\f232"; }
+/* linkedin-in       */ .fa-linkedin-in::before       { content: "\f0e1"; }
+/* youtube           */ .fa-youtube::before           { content: "\f167"; }
