@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EuroAlumínios do Sul — Caixilharia, PVC, Estores & Estruturas Metálicas</title>
+  <meta name="description" content="EuroAlumínios do Sul — Mais de 25 anos de experiência em caixilharia de alumínio e PVC, estores, estruturas metálicas e reparações na área de Almada e Seixal.">
+  <meta name="keywords" content="alumínios, caixilharia alumínio, caixilharia PVC, estores, estruturas metálicas, reparações, Almada, Seixal, euroaluminiosdosul">
+
+  <link rel="icon" type="image/png" href="logos/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========================================
+     TOP BAR
+     ======================================== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:euroaluminiosdosul@gmail.com">
+        <i class="fas fa-envelope"></i> euroaluminiosdosul@gmail.com
+      </a>
+      <a href="tel:+351939258868">
+        <i class="fas fa-phone-alt"></i> 939 258 868
+      </a>
+      <a href="tel:+351961827695">
+        <i class="fas fa-mobile-alt"></i> 961 827 695
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <div class="social-mini" style="display:flex;gap:8px">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/351939258868" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================
+     NAVEGAÇÃO
+     ======================================== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#inicio" class="nav-logo">
+        <!-- Logo branco/transparente — visível no fundo escuro da navbar -->
+        <img src="logos/logo.png" alt="EuroAlumínios do Sul"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <!-- Fallback textual se o logo não carregar -->
+        <div class="nav-logo-fallback" style="display:none">
+          <strong>EURO</strong>ALUMÍNIOS<span>do Sul</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio" class="active">Início</a></li>
+        <li><a href="#sobre">A Empresa</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Portfólio</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contactos" class="btn btn-green">
+          <i class="fas fa-paper-plane"></i> Orçamento Grátis
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Menu mobile -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#inicio"    onclick="closeMobileNav()">Início</a>
+  <a href="#sobre"     onclick="closeMobileNav()">A Empresa</a>
+  <a href="#servicos"  onclick="closeMobileNav()">Serviços</a>
+  <a href="#galeria"   onclick="closeMobileNav()">Portfólio</a>
+  <a href="#contactos" onclick="closeMobileNav()">Contactos</a>
+  <a href="#contactos" class="btn btn-green" onclick="closeMobileNav()">
+    <i class="fas fa-paper-plane"></i> Orçamento Grátis
+  </a>
+</nav>
+
+
+<!-- ========================================
+     HERO SLIDESHOW
+     ======================================== -->
+<section id="inicio">
+  <div class="hero-slider" id="heroSlider">
+
+    <!-- Slides (usando os banners reais) -->
+    <div class="hero-slide active"
+         style="background-image:url('fotos/banners/banner1.jpeg')"></div>
+    <div class="hero-slide"
+         style="background-image:url('fotos/banners/banner2.jpeg')"></div>
+    <div class="hero-slide"
+         style="background-image:url('fotos/banners/banner3.jpeg')"></div>
+    <div class="hero-slide"
+         style="background-image:url('fotos/banners/banner4.jpeg')"></div>
+    <div class="hero-slide"
+         style="background-image:url('fotos/banners/banner5.jpeg')"></div>
+    <div class="hero-slide"
+         style="background-image:url('fotos/banners/banner6.jpeg')"></div>
+    <div class="hero-slide"
+         style="background-image:url('fotos/banners/banner7.jpeg')"></div>
+
+    <!-- Conteúdo do hero -->
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-text">
+          <div class="hero-kicker">Almada & Seixal · +25 Anos de Excelência</div>
+          <h1 class="hero-title">
+            Alumínio e PVC<br>
+            <em>à sua medida.</em>
+          </h1>
+          <p class="hero-sub">
+            Caixilharia, estores, estruturas metálicas e reparações.<br>
+            Adaptamos os nossos produtos à sua realidade com qualidade de excelência.
+          </p>
+          <div class="hero-actions">
+            <a href="#contactos" class="btn btn-green">
+              <i class="fas fa-calculator"></i> Orçamento Grátis
+            </a>
+            <a href="#servicos" class="btn btn-outline-white">
+              <i class="fas fa-th-large"></i> Os Nossos Serviços
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Setas de navegação -->
+    <button class="hero-arrow prev" id="heroPrev" aria-label="Anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="hero-arrow next" id="heroNext" aria-label="Próximo">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Dots -->
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+</section>
+
+
+<!-- ========================================
+     ESTATÍSTICAS
+     ======================================== -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-target="25">0</span><span class="stat-number">+</span>
+        <span class="stat-label">Anos de Experiência</span>
+      </div>
+      <div class="stat-item reveal delay-1">
+        <span class="stat-number" data-target="1000">0</span><span class="stat-number">+</span>
+        <span class="stat-label">Obras Realizadas</span>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <span class="stat-number" data-target="800">0</span><span class="stat-number">+</span>
+        <span class="stat-label">Clientes Satisfeitos</span>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <span class="stat-number" data-target="100">0</span><span class="stat-number">%</span>
+        <span class="stat-label">Garantia de Qualidade</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================
+     SOBRE A EMPRESA
+     ======================================== -->
+<section id="sobre" class="section-pad">
+  <div class="container">
+    <div class="sobre-grid">
+
+      <div class="sobre-img reveal-left">
+        <img src="fotos/obras/EuroAluminiosdoSul_Janelas.jpeg"
+             alt="Trabalhos EuroAlumínios do Sul">
+        <div class="sobre-badge">
+          <span class="big">25+</span>
+          <span class="small">Anos no Mercado</span>
+        </div>
+      </div>
+
+      <div class="sobre-text reveal-right">
+        <span class="kicker">A Nossa História</span>
+        <h2>Uma herança de<br>qualidade e rigor</h2>
+        <p>
+          A <strong>EuroAlumínios do Sul</strong> surge no mercado há mais de 25 anos
+          pela mão do empreendedor <strong>António Guerreiro</strong>, posicionando-se
+          na área da caixilharia de alumínios, PVC e estores, com uma base sólida
+          de qualificação e décadas de experiência.
+        </p>
+        <p>
+          Sendo uma referência em todo o Concelho de <strong>Almada e Seixal</strong>,
+          <strong>Tiago Guerreiro</strong>, a convite do seu pai, trouxe ao projeto
+          uma nova dinamização e visão, colocando a empresa no expoente máximo de
+          referência neste mercado, seguindo com rigor os princípios herdados.
+        </p>
+
+        <div class="sobre-features">
+          <div class="sobre-feat"><i class="fas fa-check-circle"></i> Fabricação própria</div>
+          <div class="sobre-feat"><i class="fas fa-check-circle"></i> Alumínio e PVC certificados</div>
+          <div class="sobre-feat"><i class="fas fa-check-circle"></i> Instalação profissional</div>
+          <div class="sobre-feat"><i class="fas fa-check-circle"></i> Orçamento gratuito</div>
+          <div class="sobre-feat"><i class="fas fa-check-circle"></i> Reparações rápidas</div>
+          <div class="sobre-feat"><i class="fas fa-check-circle"></i> Atendimento personalizado</div>
+        </div>
+
+        <a href="#contactos" class="btn btn-dark">
+          <i class="fas fa-handshake"></i> Fale Connosco
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================
+     SERVIÇOS
+     ======================================== -->
+<section id="servicos" class="section-pad">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="kicker">O Que Fazemos</span>
+      <h2>Os Nossos Serviços</h2>
+      <p>Fornecimento e montagem especializado em caixilharia, estores,
+         estruturas metálicas e muito mais.</p>
+    </div>
+
+    <div class="servicos-grid">
+
+      <div class="servico-card reveal delay-1">
+        <div class="servico-foto">
+          <img src="fotos/sistemas_correr/aluminiosdosul_sistemas_correr_1.jpeg"
+               alt="Sistemas de Correr">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Caixilharia</span>
+          <h3>Sistemas de Correr & Oscilo-Batente</h3>
+          <p>Caixilharia de alumínio em sistemas de correr e oscilo-batente, gama económica e premium com vidro duplo/triplo.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-2">
+        <div class="servico-foto">
+          <img src="fotos/servicos/03_caixilharia_pvc.jpeg"
+               alt="Caixilharia PVC">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Caixilharia</span>
+          <h3>Caixilharia em PVC & Rutura Térmica</h3>
+          <p>Todo o tipo de caixilharia em PVC e perfis com rutura térmica para máximo isolamento térmico e acústico.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-3">
+        <div class="servico-foto">
+          <img src="fotos/estores/aluminiosdosul_estores_1.jpeg"
+               alt="Estores">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Estores</span>
+          <h3>Estores & Persianas</h3>
+          <p>Estores enroláveis, venezianas e persianas em alumínio para controlo de luz, privacidade e eficiência energética.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-1">
+        <div class="servico-foto">
+          <img src="fotos/estruturas/aluminiosdosul_estruturas_aluminio_1.jpeg"
+               alt="Estruturas Metálicas">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Estruturas</span>
+          <h3>Estruturas Metálicas em Alumínio</h3>
+          <p>Estruturas metálicas e de alumínio para coberturas, alpendres, marquises, telheiros e espaços exteriores.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-2">
+        <div class="servico-foto">
+          <img src="fotos/portadas/aluminiosdosul_portadas_1.jpeg"
+               alt="Portadas em Alumínio">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Portadas</span>
+          <h3>Portadas em Alumínio</h3>
+          <p>Portadas exteriores e interiores em alumínio termolacado, com acabamentos premium e alta resistência.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-3">
+        <div class="servico-foto">
+          <img src="fotos/reparacoes/aluminiosdosul_reparacoes_main.jpeg"
+               alt="Reparações">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Reparações</span>
+          <h3>Reparações & Manutenção</h3>
+          <p>Mostre-nos o que precisa na sua casa ou empresa e faremos as reparações necessárias com rapidez e qualidade.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mais serviços em linha -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
+
+      <div class="servico-card reveal delay-1">
+        <div class="servico-foto" style="height:150px">
+          <img src="fotos/marquises/aluminiosdosul_marquises_1.jpeg" alt="Marquises">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Coberturas</span>
+          <h3>Marquises</h3>
+          <p>Marquises em alumínio e vidro para aproveitar ao máximo os seus espaços exteriores.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-2">
+        <div class="servico-foto" style="height:150px">
+          <img src="fotos/vedacoes/aluminiosdosul_vedacoes_gradeamentos_1.jpeg" alt="Vedações">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Vedações</span>
+          <h3>Vedações & Gradeamentos</h3>
+          <p>Vedações, grades e corrimãos em alumínio anodizado ou termolacado com diferentes acabamentos.</p>
+        </div>
+      </div>
+
+      <div class="servico-card reveal delay-3">
+        <div class="servico-foto" style="height:150px">
+          <img src="fotos/portas_decorativas/aluminiosdosul_portas_paineis_decorativos_1.jpeg" alt="Portas Decorativas">
+          <div class="servico-foto-overlay"></div>
+        </div>
+        <div class="servico-body">
+          <span class="servico-tag">Portas</span>
+          <h3>Portas com Painéis Decorativos</h3>
+          <p>Portas de entrada e acesso em alumínio com painéis decorativos, design contemporâneo e alta segurança.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================
+     GALERIA / PORTFÓLIO
+     ======================================== -->
+<section id="galeria" class="section-pad">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="kicker">Os Nossos Trabalhos</span>
+      <h2>Portfólio de Obras</h2>
+      <p>Cada projeto é único. Veja alguns dos trabalhos que realizámos ao longo dos anos.</p>
+    </div>
+
+    <div class="galeria-filtros reveal">
+      <button class="filtro-btn active" data-filter="todos">Todos</button>
+      <button class="filtro-btn" data-filter="janelas">Janelas</button>
+      <button class="filtro-btn" data-filter="portas">Portas & Portões</button>
+      <button class="filtro-btn" data-filter="sistemas">Sistemas Correr</button>
+      <button class="filtro-btn" data-filter="estores">Estores</button>
+      <button class="filtro-btn" data-filter="estruturas">Estruturas</button>
+      <button class="filtro-btn" data-filter="reparacoes">Reparações</button>
+    </div>
+
+    <div class="galeria-grid" id="galeriaGrid">
+
+      <div class="galeria-item" data-cat="janelas">
+        <img src="fotos/obras/EuroAluminiosdoSul_Janelas.jpeg" alt="Janelas em Alumínio">
+        <div class="galeria-overlay">
+          <h4>Janelas em Alumínio</h4><span>Janelas</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="janelas">
+        <img src="fotos/obras/EuroAluminiosdoSul_Janelas2.jpeg" alt="Janelas">
+        <div class="galeria-overlay">
+          <h4>Caixilharia Alumínio</h4><span>Janelas</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="portas">
+        <img src="fotos/obras/EuroAluminiosdoSul_Portas.jpeg" alt="Portas em Alumínio">
+        <div class="galeria-overlay">
+          <h4>Portas em Alumínio</h4><span>Portas & Portões</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="portas">
+        <img src="fotos/obras/EuroAluminiosdoSul_Portoes.jpeg" alt="Portões">
+        <div class="galeria-overlay">
+          <h4>Portão em Alumínio</h4><span>Portas & Portões</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="sistemas">
+        <img src="fotos/sistemas_correr/aluminiosdosul_sistemas_correr_1.jpeg" alt="Sistema de Correr">
+        <div class="galeria-overlay">
+          <h4>Sistema de Correr</h4><span>Sistemas Correr</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="sistemas">
+        <img src="fotos/sistemas_correr/aluminiosdosul_sistemas_correr_2.jpeg" alt="Oscilo-Batente">
+        <div class="galeria-overlay">
+          <h4>Oscilo-Batente</h4><span>Sistemas Correr</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="estores">
+        <img src="fotos/estores/aluminiosdosul_estores_1.jpeg" alt="Estores">
+        <div class="galeria-overlay">
+          <h4>Estores Enroláveis</h4><span>Estores</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="estores">
+        <img src="fotos/estores/aluminiosdosul_estores_2.jpeg" alt="Estores">
+        <div class="galeria-overlay">
+          <h4>Estores Exteriores</h4><span>Estores</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="estruturas">
+        <img src="fotos/estruturas/aluminiosdosul_estruturas_aluminio_1.jpeg" alt="Estruturas Metálicas">
+        <div class="galeria-overlay">
+          <h4>Estrutura Metálica</h4><span>Estruturas</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="estruturas">
+        <img src="fotos/marquises/aluminiosdosul_marquises_1.jpeg" alt="Marquise">
+        <div class="galeria-overlay">
+          <h4>Marquise</h4><span>Estruturas</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="portas">
+        <img src="fotos/obras/EuroAluminiosdoSul_Grades.jpeg" alt="Grades">
+        <div class="galeria-overlay">
+          <h4>Grades em Alumínio</h4><span>Portas & Portões</span>
+        </div>
+      </div>
+
+      <div class="galeria-item" data-cat="reparacoes">
+        <img src="fotos/reparacoes/aluminiosdosul_reparacoes_1.jpeg" alt="Reparações">
+        <div class="galeria-overlay">
+          <h4>Reparação Caixilharia</h4><span>Reparações</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="#contactos" class="btn btn-green">
+        <i class="fas fa-images"></i> Solicitar Orçamento para a Sua Obra
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========================================
+     PORQUÊ NÓS
+     ======================================== -->
+<section id="porque-nos" class="section-pad">
+  <div class="container">
+
+    <div class="section-header light reveal">
+      <span class="kicker">As Nossas Vantagens</span>
+      <h2>Porque Escolher a EuroAlumínios?</h2>
+      <p>Comprometidos com a qualidade e a satisfação total do cliente em cada projeto.</p>
+    </div>
+
+    <div class="porque-grid">
+      <div class="porque-card reveal delay-1">
+        <div class="porque-icon"><i class="fas fa-user-check"></i></div>
+        <h3>Centrado no Cliente</h3>
+        <p>As necessidades dos nossos clientes sempre em primeiro lugar. Identificamos cada projeto de forma personalizada.</p>
+      </div>
+      <div class="porque-card reveal delay-2">
+        <div class="porque-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Rapidez e Eficácia</h3>
+        <p>Garantimos rapidez no trabalho sem nunca comprometer a qualidade máxima de execução.</p>
+      </div>
+      <div class="porque-card reveal delay-3">
+        <div class="porque-icon"><i class="fas fa-award"></i></div>
+        <h3>25 Anos de Experiência</h3>
+        <p>A nossa experiência comprova a qualidade e excelência. Décadas de obras bem feitas falam por nós.</p>
+      </div>
+      <div class="porque-card reveal delay-4">
+        <div class="porque-icon"><i class="fas fa-tools"></i></div>
+        <h3>Materiais Certificados</h3>
+        <p>Utilizamos exclusivamente materiais e sistemas certificados para garantir durabilidade e conformidade.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========================================
+     CONTACTOS
+     ======================================== -->
+<section id="contactos" class="section-pad">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="kicker">Entre em Contacto</span>
+      <h2>Fale Connosco</h2>
+      <p>Não perca tempo — contacte-nos e prometemos responder em menos de 24 horas.</p>
+    </div>
+
+    <div class="contactos-layout">
+
+      <!-- Informações + Mapa -->
+      <div class="contactos-info reveal-left">
+        <h3>Informações de Contacto</h3>
+        <p>Visite-nos, ligue ou envie uma mensagem. Orçamentos gratuitos e sem compromisso
+           para qualquer tipo de trabalho em caixilharia, estores ou estruturas.</p>
+
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-item-text">
+              <strong>Morada</strong>
+              <span>Rua Direita do Pragal n.11, Pragal — Almada</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-item-text">
+              <strong>Telefone</strong>
+              <span><a href="tel:+351939258868">939 258 868</a></span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div class="info-item-text">
+              <strong>Telemóvel</strong>
+              <span><a href="tel:+351961827695">961 827 695</a></span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fas fa-envelope"></i></div>
+            <div class="info-item-text">
+              <strong>Email</strong>
+              <span><a href="mailto:euroaluminiosdosul@gmail.com">euroaluminiosdosul@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-item-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="info-item-text">
+              <strong>WhatsApp</strong>
+              <span><a href="https://wa.me/351939258868" target="_blank">Enviar mensagem no WhatsApp</a></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <!-- ⚠️ Para colocar a morada real:
+             1. Vá a maps.google.com
+             2. Pesquise a morada da empresa
+             3. Clique em "Partilhar" → "Incorporar mapa"
+             4. Substitua o iframe abaixo pelo código gerado -->
+        <!-- Mapa: Rua Direita do Pragal, Almada -->
+        <div class="mapa-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.5!2d-9.1580!3d38.6720!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1943c7b3a5a8f9%3A0x0!2sRua+Direita+do+Pragal%2C+Almada!5e0!3m2!1spt!2spt!4v1700000000000!5m2!1spt!2spt"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="EuroAlumínios do Sul — Rua Direita do Pragal, Almada">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <div class="contactos-form reveal-right">
+        <h3>Peça o Seu Orçamento</h3>
+
+        <div class="form-msg success" id="formSuccess"></div>
+        <div class="form-msg error"   id="formError"></div>
+
+        <form id="contactForm" method="POST" action="enviar_email.php" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" placeholder="O seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="9XX XXX XXX">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="o.seu.email@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="assunto">Tipo de Serviço</label>
+            <select id="assunto" name="assunto">
+              <option value="">— Selecione um serviço —</option>
+              <option>Caixilharia de Alumínio</option>
+              <option>Caixilharia de PVC</option>
+              <option>Estores & Persianas</option>
+              <option>Estruturas Metálicas</option>
+              <option>Marquises</option>
+              <option>Portadas em Alumínio</option>
+              <option>Portas com Painéis Decorativos</option>
+              <option>Vedações & Gradeamentos</option>
+              <option>Reparações & Manutenção</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem"
+              placeholder="Descreva o seu projeto — tipo de trabalho, dimensões aproximadas, local, etc."
+              required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-green form-submit">
+            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================================
+     FOOTER
+     ======================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <a href="#inicio" style="display:flex;align-items:center;gap:10px">
+            <img src="logos/logo.png" alt="EuroAlumínios do Sul"
+                 onerror="this.style.display='none'">
+            <div class="footer-logo-text">EuroAlumínios<span>do Sul</span></div>
+          </a>
+        </div>
+        <p>Mais de 25 anos de experiência em caixilharia de alumínio e PVC,
+           estores, estruturas metálicas e reparações na área de Almada e Seixal.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/351939258868" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Caixilharia Alumínio</a></li>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Caixilharia PVC</a></li>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Estores & Persianas</a></li>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Estruturas Metálicas</a></li>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Marquises</a></li>
+          <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Reparações</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Início</a></li>
+          <li><a href="#sobre"><i class="fas fa-chevron-right"></i> A Nossa História</a></li>
+          <li><a href="#galeria"><i class="fas fa-chevron-right"></i> Portfólio</a></li>
+          <li><a href="#porque-nos"><i class="fas fa-chevron-right"></i> Porquê Nós</a></li>
+          <li><a href="#contactos"><i class="fas fa-chevron-right"></i> Orçamento Grátis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+351939258868"><i class="fas fa-phone-alt"></i> 939 258 868</a></li>
+          <li><a href="tel:+351961827695"><i class="fas fa-mobile-alt"></i> 961 827 695</a></li>
+          <li><a href="mailto:euroaluminiosdosul@gmail.com"><i class="fas fa-envelope"></i> euroaluminiosdosul@gmail.com</a></li>
+          <li><a href="#contactos"><i class="fas fa-map-marker-alt"></i> Pragal — Almada</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 <a href="#inicio">EuroAlumínios do Sul</a>. Todos os direitos reservados.</p>
+      <p>Website por <a href="http://hugoguedelha.solxira.com" target="_blank" rel="noopener">Hugo Guedelha</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- WhatsApp Flutuante -->
+<a href="https://wa.me/351939258868?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento."
+   class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<!-- Scripts -->
+<script src="main.js"></script>
+
+<!-- Verificar retorno do PHP -->
+<script>
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('enviado') === '1') {
+    const el = document.getElementById('formSuccess');
+    el.textContent = '✅ Mensagem enviada com sucesso! Entraremos em contacto brevemente.';
+    el.style.display = 'block';
+    document.getElementById('contactos').scrollIntoView({ behavior: 'smooth' });
+  }
+  if (p.get('erro') === '1') {
+    const el = document.getElementById('formError');
+    el.textContent = '❌ Erro ao enviar a mensagem. Por favor contacte-nos por telefone.';
+    el.style.display = 'block';
+    document.getElementById('contactos').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
