@@ -34,9 +34,9 @@
     </div>
     <div class="top-bar-right">
       <div class="social-mini" style="display:flex;gap:8px">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/351939258868" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Facebook" class="soc-fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="soc-ig"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/351939258868" target="_blank" aria-label="WhatsApp" class="soc-wa"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
@@ -613,7 +613,8 @@
         <div class="form-msg success" id="formSuccess"></div>
         <div class="form-msg error"   id="formError"></div>
 
-        <form id="contactForm" method="POST" action="enviar_email.php" novalidate>
+        <!-- ⚠️ FORMSPREE: substitua YOUR_FORM_ID pelo ID do seu formulário em formspree.io -->
+        <form id="contactForm" method="POST" action="https://formspree.io/f/xdablbgy" novalidate>
 
           <div class="form-row">
             <div class="form-group">
@@ -655,6 +656,10 @@
               required></textarea>
           </div>
 
+          <!-- Campos ocultos para Formspree -->
+          <input type="hidden" name="_replyto" id="_replyto">
+          <input type="text" name="_gotcha" style="display:none">
+
           <button type="submit" class="btn btn-green form-submit">
             <i class="fas fa-paper-plane"></i> Enviar Mensagem
           </button>
@@ -673,23 +678,6 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-
-      <div class="footer-brand">
-        <div class="footer-logo-wrap">
-          <a href="#inicio" style="display:flex;align-items:center;gap:10px">
-            <img src="logos/logo.png" alt="EuroAlumínios do Sul"
-                 onerror="this.style.display='none'">
-            <div class="footer-logo-text">EuroAlumínios<span>do Sul</span></div>
-          </a>
-        </div>
-        <p>Mais de 25 anos de experiência em caixilharia de alumínio e PVC,
-           estores, estruturas metálicas e reparações na área de Almada e Seixal.</p>
-        <div class="social-links">
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/351939258868" class="social-link"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
 
       <div class="footer-col">
         <h4>Serviços</h4>
@@ -724,10 +712,26 @@
         </ul>
       </div>
 
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <a href="#inicio">
+            <img src="logos/logo.png" alt="EuroAlumínios do Sul"
+                 onerror="this.style.display='none'">
+          </a>
+        </div>
+        <p>Mais de 25 anos de experiência em caixilharia de alumínio e PVC,
+           estores, estruturas metálicas e reparações na área de Almada e Seixal.</p>
+        <div class="social-links">
+          <a href="#" class="social-link soc-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link soc-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/351939258868" class="social-link soc-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 <a href="#inicio">EuroAlumínios do Sul</a>. Todos os direitos reservados.</p>
+      <p>&copy; 2026 <a href="#inicio">EuroAlumínios do Sul</a>. Todos os direitos reservados.</p>
       <p>Website por <a href="http://hugoguedelha.solxira.com" target="_blank" rel="noopener">Hugo Guedelha</a></p>
     </div>
   </div>
@@ -744,22 +748,6 @@
 <!-- Scripts -->
 <script src="main.js"></script>
 
-<!-- Verificar retorno do PHP -->
-<script>
-  const p = new URLSearchParams(window.location.search);
-  if (p.get('enviado') === '1') {
-    const el = document.getElementById('formSuccess');
-    el.textContent = '✅ Mensagem enviada com sucesso! Entraremos em contacto brevemente.';
-    el.style.display = 'block';
-    document.getElementById('contactos').scrollIntoView({ behavior: 'smooth' });
-  }
-  if (p.get('erro') === '1') {
-    const el = document.getElementById('formError');
-    el.textContent = '❌ Erro ao enviar a mensagem. Por favor contacte-nos por telefone.';
-    el.style.display = 'block';
-    document.getElementById('contactos').scrollIntoView({ behavior: 'smooth' });
-  }
-</script>
 
 </body>
 </html>

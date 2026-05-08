@@ -186,17 +186,22 @@ if (contactForm) {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> A enviar…';
     btn.disabled = true;
 
+    // Copia email para _replyto (Formspree reply-to)
+    const replyTo = contactForm.querySelector('#_replyto');
+    if (replyTo) replyTo.value = contactForm.email.value.trim();
+
     try {
-      const res = await fetch('enviar_email.php', {
+      const res = await fetch(contactForm.action, {
         method: 'POST',
         body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' },
       });
-      const json = await res.json().catch(() => ({ success: res.ok }));
-      if (res.ok && json.success !== false) {
+      if (res.ok) {
         showMsg('success', '✅ Mensagem enviada! Entraremos em contacto brevemente.');
         contactForm.reset();
       } else {
-        throw new Error(json.message || 'Erro no servidor');
+        const json = await res.json().catch(() => ({}));
+        throw new Error((json.errors || []).map(e => e.message).join(', ') || 'Erro no servidor');
       }
     } catch (err) {
       showMsg('error', '❌ Não foi possível enviar. Por favor contacte-nos por telefone: 939 258 868');

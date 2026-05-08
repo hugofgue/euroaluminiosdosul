@@ -203,11 +203,10 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.55);
   transition: var(--transition);
 }
-.top-bar .social-mini a:hover {
-  background: var(--green);
-  border-color: var(--green);
-  color: var(--white);
-}
+.top-bar .social-mini a:hover { color: var(--white); }
+.top-bar .social-mini a.soc-fb:hover { background: #1877F2; border-color: #1877F2; }
+.top-bar .social-mini a.soc-ig:hover { background: #E1306C; border-color: #E1306C; }
+.top-bar .social-mini a.soc-wa:hover { background: #25D366; border-color: #25D366; }
 
 /* ============================================
    NAVEGAÇÃO — sempre escura (logo é branco/transparente)
@@ -870,7 +869,7 @@ ul { list-style: none; }
 footer { background: var(--dark-800); padding: 70px 0 0; }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
   gap: 48px;
   padding-bottom: 56px;
   border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -891,12 +890,10 @@ footer { background: var(--dark-800); padding: 70px 0 0; }
   font-size: 0.82rem;
   transition: var(--transition);
 }
-.social-link:hover {
-  background: var(--green);
-  border-color: var(--green);
-  color: var(--white);
-  transform: translateY(-2px);
-}
+.social-link:hover { color: var(--white); transform: translateY(-2px); }
+.social-link.soc-fb:hover { background: #1877F2; border-color: #1877F2; }
+.social-link.soc-ig:hover { background: #E1306C; border-color: #E1306C; }
+.social-link.soc-wa:hover { background: #25D366; border-color: #25D366; }
 .footer-col h4 {
   font-size: 0.74rem;
   font-weight: 800;
@@ -981,8 +978,118 @@ footer { background: var(--dark-800); padding: 70px 0 0; }
 .delay-6 { transition-delay:.6s!important; }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVO — TABLET (≤1024px)
    ============================================ */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
+  .container { padding: 0 24px; }
+
+  .hero-content h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+
+  .sobre-layout { grid-template-columns: 1fr 1fr; gap: 40px; }
+
   .servicos-grid { grid-template-columns: repeat(2, 1fr); }
-  .porque-
+
+  .galeria-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .porque-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contactos-layout { grid-template-columns: 1fr; }
+  .contactos-info { order: 2; }
+  .contactos-form { order: 1; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .footer-brand { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+  .footer-brand p { margin: 0; max-width: 380px; }
+}
+
+/* ============================================
+   RESPONSIVO — MOBILE (≤768px)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Top bar — ocultar em mobile */
+  .top-bar { display: none; }
+
+  /* Container */
+  .container { padding: 0 16px; }
+
+  /* Navbar */
+  .nav-inner { height: 60px; }
+  .nav-logo img { height: 38px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero-slide { background-position: center center; }
+  .hero-content { padding: 0 20px; text-align: center; }
+  .hero-content h1 { font-size: clamp(1.6rem, 7vw, 2.4rem); margin-bottom: 12px; }
+  .hero-content p  { font-size: 0.95rem; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .hero-btns .btn { width: 100%; max-width: 280px; justify-content: center; }
+  .hero-arrow { display: none; }
+
+  /* Stats */
+  .stats-bar .container { flex-wrap: wrap; }
+  .stat-item { flex: 1 1 45%; padding: 20px 10px; }
+  .stat-item + .stat-item { border-left: none; border-top: 1px solid rgba(255,255,255,0.06); }
+  .stat-number { font-size: 2.4rem; }
+
+  /* Sobre */
+  .sobre-layout { grid-template-columns: 1fr; }
+  .sobre-img { max-height: 260px; overflow: hidden; border-radius: 12px; }
+  .sobre-img img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Serviços */
+  .servicos-grid { grid-template-columns: 1fr; }
+
+  /* Galeria */
+  .filtro-btns { gap: 6px; }
+  .filtro-btn { font-size: 0.72rem; padding: 7px 14px; }
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+
+  /* Porque nós */
+  .porque-grid { grid-template-columns: 1fr; }
+
+  /* Contactos */
+  .contactos-layout { grid-template-columns: 1fr; gap: 32px; }
+  .mapa-wrapper iframe { height: 220px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand { flex-direction: column; gap: 16px; }
+  .footer-logo-wrap img { height: 44px; }
+  footer { padding: 40px 0 0; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+
+  /* WhatsApp FAB */
+  .whatsapp-fab { bottom: 18px; right: 18px; width: 48px; height: 48px; font-size: 1.3rem; }
+
+  /* Secções */
+  .section-pad { padding: 56px 0; }
+  .section-header { margin-bottom: 36px; }
+  .section-header h2 { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+
+  /* Formulário */
+  .form-row { grid-template-columns: 1fr; }
+  .form-group textarea { min-height: 120px; }
+
+  /* Desativar animações de reveal em mobile */
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVO — MOBILE PEQUENO (≤480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 1.55rem; }
+  .stat-item { flex: 1 1 100%; }
+  .galeria-grid { grid-template-columns: 1fr; }
+  .filtro-btns { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }
+  .filtro-btn { white-space: nowrap; flex-shrink: 0; }
+  .porque-card { padding: 28px 20px; }
+  .info-item { gap: 12px; }
+  .info-item-icon { width: 40px; height: 40px; font-size: 1rem; flex-shrink: 0; }
+}
